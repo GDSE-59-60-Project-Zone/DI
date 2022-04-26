@@ -17,17 +17,25 @@ public class Boy implements DI {
         this.agreement = a;
     }*/
 
+    @Override
+    public void inject(Agreement a) {
+        agreement = a;
+    }
+
+    //Main Method
     public static void main(String[] args) {
-       /* Boy boy = new Boy(new Girl());
-        boy.chatWithGirl();*/
+//        Boy boy = new Boy(new Girl());
+//        boy.chatWithGirl();
 
-   /*     Boy boy = new Boy();
-        boy.setInjection(new Girl());
-        boy.chatWithGirl();*/
+//        Boy boy = new Boy();
+//        boy.setInjection(new Girl());
+//        boy.chatWithGirl();
 
+        //interface through injection
         Boy boy = new Boy();
-
+        boy.inject(new Girl());
         boy.chatWithGirl();
+
     }
 
     //Setter method injection
@@ -45,10 +53,7 @@ public class Boy implements DI {
         agreement.chat();
     }
 
-    @Override
-    public void inject(Agreement a) {
-        agreement = a;
-    }
+
 
 
 }
