@@ -6,7 +6,7 @@
 //Var args in action
 public class Test {
     public static void main(String[] args) {
-        test("Insert into Customer values(?,?,?,?)",10,"",true);
+        test("Insert into Customer values(?,?,?,?)",10,"IJSE",true);
     }
 
     public static void test(String sql,Object... ob){ // we can set optional params after sql by using var args
